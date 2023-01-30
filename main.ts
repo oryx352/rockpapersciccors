@@ -4,13 +4,13 @@ input.onButtonPressed(Button.A, function () {
 function show_score_board () {
     OLED.clear()
     OLED.newLine()
-    OLED.writeStringNewLine("player a" + pa)
+    OLED.writeStringNewLine("player a: " + pa)
     OLED.newLine()
-    OLED.writeStringNewLine("player b" + pb)
+    OLED.writeStringNewLine("player b: " + pb)
     OLED.newLine()
-    OLED.writeStringNewLine("ties" + t)
+    OLED.writeStringNewLine("ties: " + t)
     OLED.newLine()
-    OLED.writeStringNewLine("rounds" + rounds)
+    OLED.writeStringNewLine("rounds: " + rounds)
 }
 input.onButtonPressed(Button.AB, function () {
 	
