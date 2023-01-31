@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-	
+    pa += 1
 })
 function show_score_board () {
     OLED.clear()
@@ -13,13 +13,20 @@ function show_score_board () {
     OLED.writeStringNewLine("rounds: " + rounds)
 }
 input.onButtonPressed(Button.AB, function () {
-	
+    t += 1
 })
 input.onButtonPressed(Button.B, function () {
-	
+    pb += 1
 })
 input.onGesture(Gesture.Shake, function () {
-	
+    OLED.init(128, 64)
+    pa = 0
+    pb = 0
+    t = 0
+    rounds = 0
+    OLED.writeStringNewLine("lets play!")
+    basic.pause(2000)
+    show_score_board()
 })
 let rounds = 0
 let t = 0
